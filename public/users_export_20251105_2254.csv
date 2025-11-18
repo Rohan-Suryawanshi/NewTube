@@ -1,0 +1,6 @@
+﻿User ID,Name,Email,Phone,EmpID,Role,Status,Last Login
+"9dfe3f67-31ba-4e36-a4ae-c79b19cb3bc0","System SuperAdmin","superadmin@system.com","0000000000","SUPERADMIN","SuperAdmin","Active","11/4/2025, 1:37:09 PM"
+"94e31819-a476-4f78-aeb9-9586fe703ce4","New User","newuser@example.com","9876543210","EMP002","second","Active","11/4/2025, 2:08:08 PM"
+"d6dcc440-ead8-4fb3-8e82-68937e057319","Rohan","rohan@gmail.com","1234567890","USR604","Rohan","Active","11/5/2025, 4:27:44 PM"
+"b6be23ff-e616-41b8-a122-4aec1280b316","rohan","rohan1@gmail.com","1234567891","","Rohan","Active","11/5/2025, 5:42:24 PM"
+"e977bdcf-4a02-4046-bf99-b53271a6584a","Rohan Demo","code@gmail.com","1234568782","EMP0003","Demo Role","Active","11/5/2025, 10:50:33 PM"
