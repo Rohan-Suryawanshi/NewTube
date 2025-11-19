@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo "🔍 Running pre-commit checks: lint-staged (ESLint + Prettier on staged files)"
 
 # Run lint-staged on staged files
