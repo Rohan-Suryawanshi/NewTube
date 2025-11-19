@@ -18,12 +18,12 @@ const eslintConfig = [
       "no-unused-vars": "off", // TypeScript handles this
       "@typescript-eslint/no-unused-vars": [
         "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
       "@typescript-eslint/no-explicit-any": "warn",
       "prefer-const": "error",
       "no-var": "error",
-      
+
       // React/Next.js specific
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",

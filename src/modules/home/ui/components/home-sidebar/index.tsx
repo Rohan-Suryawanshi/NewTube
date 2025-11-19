@@ -6,14 +6,14 @@ import PersonalSection from "./personal-section";
 
 const HomeSidebar = () => {
   return (
-     <Sidebar className="pt-16 z-20 border-none" collapsible="icon">
-        <SidebarContent className="bg-background">
-           <MainSection />
-           <Separator />
-           <PersonalSection />
-        </SidebarContent>
-     </Sidebar>
+    <Sidebar className="pt-16 z-20 border-none" collapsible="icon">
+      <SidebarContent className="bg-background">
+        <MainSection />
+        <Separator />
+        <PersonalSection />
+      </SidebarContent>
+    </Sidebar>
   );
-}
- 
+};
+
 export default HomeSidebar;

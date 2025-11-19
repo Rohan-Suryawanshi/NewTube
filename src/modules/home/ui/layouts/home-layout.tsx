@@ -5,20 +5,18 @@ import HomeSidebar from "../components/home-sidebar";
 interface HomeLayoutProps {
   children: React.ReactNode;
 }
-const HomeLayout = ({children}:HomeLayoutProps) => {
+const HomeLayout = ({ children }: HomeLayoutProps) => {
   return (
-     <SidebarProvider>
-        <div className="w-full bg-blue-500">
-           <HomeNavbar />
-           <div className="flex min-h-screen pt-[4rem] bg-red-300">
-            <HomeSidebar />
-            <main className="flex-1 overflow-y-auto">
-              {children}
-            </main>
-           </div>
+    <SidebarProvider>
+      <div className="w-full bg-blue-500">
+        <HomeNavbar />
+        <div className="flex min-h-screen pt-[4rem] bg-red-300">
+          <HomeSidebar />
+          <main className="flex-1 overflow-y-auto">{children}</main>
         </div>
-     </SidebarProvider>
+      </div>
+    </SidebarProvider>
   );
-}
- 
+};
+
 export default HomeLayout;

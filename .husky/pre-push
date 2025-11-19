@@ -10,7 +10,7 @@ npm run type-check || {
   echo "Pre-push: TypeScript type check failed.";
   exit 1;
 }
-echo "✅ Type check passed."
+echo "Type check passed."
 echo ""
 
 # 2. Run Prettier check
