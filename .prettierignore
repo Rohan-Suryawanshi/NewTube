@@ -1,0 +1,50 @@
+
+# Dependencies
+node_modules
+
+# Next.js / build output
+.next
+out
+dist
+build
+.output
+
+# Common lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lock
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor/IDE folders
+.vscode
+.idea
+
+# Caches
+.cache
+.parcel-cache
+.turbo
+
+# Logs
+*.log
+logs
+
+# Coverage
+coverage
+
+# OS files
+.DS_Store
+
+# Public/static assets (no need for Prettier to process binary files)
+public
+
+# Minified/bundled files
+*.min.js
+*.min.css
+*.map

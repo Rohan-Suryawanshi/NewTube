@@ -1,0 +1,18 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running pre-push checks: Prettier (check) and lint"
+
+# Run Prettier check
+npm run format:check || {
+  echo "Pre-push: Prettier check failed. Run 'npm run format' to fix formatting.";
+  exit 1;
+}
+
+# Run linter
+npm run lint || {
+  echo "Pre-push: Lint failed. Run 'npm run lint:fix' or 'npm run lint' to see issues.";
+  exit 1;
+}
+
+echo "Pre-push checks passed."
