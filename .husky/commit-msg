@@ -1,14 +1,23 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Enforce a basic conventional commit format for commit messages.
-# Allowed types: feat, fix, chore, docs, style, refactor, perf, test, build, ci, revert
-commit_msg_file="$1"
-commit_msg=$(cat "$commit_msg_file")
-regex='^(feat|fix|chore|docs|style|refactor|perf|test|build|ci|revert)(\(.+\))?: .{1,}'
+echo "🔍 Validating commit message format..."
 
-if ! echo "$commit_msg" | grep -Eq "$regex"; then
-  echo "\nCommit message validation failed."
-  echo "Use conventional commits, e.g. 'feat(auth): add login' or 'fix: correct typo'"
-  exit 1
-fi
+# Use commitlint to validate commit message
+npx --no-install commitlint --edit "$1" || {
+  echo "";
+  echo "❌ Commit message validation failed.";
+  echo "";
+  echo "Use conventional commits format:";
+  echo "  feat(scope): add new feature";
+  echo "  fix(scope): fix bug";
+  echo "  docs: update documentation";
+  echo "  style: format code";
+  echo "  refactor: refactor code";
+  echo "  test: add tests";
+  echo "  chore: update dependencies";
+  echo "";
+  exit 1;
+}
+
+echo "✅ Commit message is valid."

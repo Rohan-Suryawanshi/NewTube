@@ -1,5 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+echo "🔍 Running pre-commit checks: lint-staged (ESLint + Prettier on staged files)"
+
 # Run lint-staged on staged files
-npx --no-install lint-staged
+npx --no-install lint-staged || {
+  echo "❌ Pre-commit: lint-staged failed. Fix errors and try again.";
+  exit 1;
+}
+
+echo "✅ Pre-commit checks passed."
