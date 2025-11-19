@@ -1,7 +1,7 @@
 echo "🔍 Running pre-commit checks: lint-staged (ESLint + Prettier on staged files)"
 
 # Run lint-staged on staged files
-npx --no-install lint-staged || {
+bunx --bun lint-staged || {
   echo "❌ Pre-commit: lint-staged failed. Fix errors and try again.";
   exit 1;
 }
