@@ -11,6 +11,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky install",
+    "postinstall": "husky install",
     "push": "bunx drizzle-kit push",
     "studio": "bunx drizzle-kit studio",
     "dev:webhook": "cmd /c ngrok http --domain=nonreciprocally-pilgrimatic-karina.ngrok-free.dev 3000",
