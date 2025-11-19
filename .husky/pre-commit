@@ -1,9 +1,9 @@
-echo "🔍 Running pre-commit checks: lint-staged (ESLint + Prettier on staged files)"
+echo "Running pre-commit checks: lint-staged (ESLint + Prettier on staged files)"
 
 # Run lint-staged on staged files
 bunx --bun lint-staged || {
-  echo "❌ Pre-commit: lint-staged failed. Fix errors and try again.";
+  echo "Pre-commit: lint-staged failed. Fix errors and try again.";
   exit 1;
 }
 
-echo "✅ Pre-commit checks passed."
+echo "Pre-commit checks passed."
