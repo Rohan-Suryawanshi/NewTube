@@ -1,7 +1,6 @@
 import { Webhook } from "svix";
 
 export async function POST(request: Request) {
-  console.warn("[webhook] received request");
   const signingSecret = process.env.CLERK_SIGNING_SECRET;
 
   if (!signingSecret) {
@@ -18,7 +17,7 @@ export async function POST(request: Request) {
   }
 
   // Use the raw text body for signature verification. Parsing then
-  // re stringify can change whitespace/property order and break
+  // re-stringifying can change whitespace/property order and break
   // signature verification.
   const body = await request.text();
   let evt: unknown;
@@ -38,7 +37,6 @@ export async function POST(request: Request) {
   const verified = evt as { data?: { id?: string }; type?: string } | undefined;
   const id = verified?.data?.id;
   const eventType = verified?.type;
-
   console.warn("Received event:", eventType, "for user ID:", id);
   return new Response("Webhook processed", { status: 200 });
 }

@@ -1,7 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Force LF for source code files
+# Force LF(\n) for source code files
 *.ts text eol=lf
 *.tsx text eol=lf
 *.js text eol=lf
